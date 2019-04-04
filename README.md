@@ -10,6 +10,6 @@ Outras informações:
   * inicialmente, pensei em utilizar a classe java.awt.Point para representar um ponto. Entretanto, resolvi utiilizar uma de minha autoria mesmo, visto que teria mais flexibilidade para 
  mudar a classe se necessário, além do fato de que essa classe da biblioteca padrão do Java possui métodos que não são necessários para a resolução do problema proposto.
   * não foram necessários ifs/elses explícitos em nenhum lugar do código;
-  * as classes Posicao e SondaEspacialService contém testes que simulam os exemplos fornecidos no enunciado do teste;
+  * as classes Posicao, SondaEspacialService e SondaEspacialController contém testes que simulam os exemplos fornecidos no enunciado do teste;
   
  Status: estão prontas as camadas de domínio e service, faltando apenas o controller e seus testes.

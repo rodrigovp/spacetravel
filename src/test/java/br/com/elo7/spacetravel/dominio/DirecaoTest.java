@@ -52,4 +52,17 @@ public class DirecaoTest {
 		direcao = Direcao.LESTE;
 		assertThat(direcao.redirecionar(Movimento.M), is(equalTo(Direcao.LESTE))); 
 	}
+	
+	@Test
+	public void buscarDirecaoViaIdentificador() {
+		Direcao norte = Direcao.identificadaPor("N");
+		Direcao sul = Direcao.identificadaPor("S");
+		Direcao leste = Direcao.identificadaPor("E");
+		Direcao oeste = Direcao.identificadaPor("W");
+		
+		assertThat(norte, is(equalTo(Direcao.NORTE)));
+		assertThat(sul, is(equalTo(Direcao.SUL)));
+		assertThat(leste, is(equalTo(Direcao.LESTE)));
+		assertThat(oeste, is(equalTo(Direcao.OESTE)));
+	}
 }

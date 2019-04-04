@@ -11,6 +11,9 @@ import org.junit.Test;
 
 public class PosicaoTest {
 	
+	public static final Posicao POSICAO_PRIMEIRO_EXEMPLO_DESCRITO = new Posicao(Direcao.NORTE, new Ponto(1, 3));
+	public static final Posicao POSICAO_SEGUNDO_EXEMPLO_DESCRITO = new Posicao(Direcao.LESTE, new Ponto(5, 1));
+	
 	@Test
 	public void reposicionar90GrausAEsquerda() {
 		Ponto pontoInicial = new Ponto(0, 0);
@@ -50,8 +53,7 @@ public class PosicaoTest {
 				.reposicionar(L).reposicionar(M)
 				.reposicionar(L).reposicionar(M).reposicionar(M);
 		
-		Posicao posicaoEsperada = new Posicao(Direcao.NORTE, new Ponto(1, 3));
-		assertThat(novaPosicao, is(equalTo(posicaoEsperada)));
+		assertThat(novaPosicao, is(equalTo(POSICAO_PRIMEIRO_EXEMPLO_DESCRITO)));
 	}
 	
 	//MMR MMR MRR M
@@ -64,8 +66,7 @@ public class PosicaoTest {
 				.reposicionar(M).reposicionar(R).reposicionar(R)
 				.reposicionar(M);
 		
-		Posicao posicaoEsperada = new Posicao(Direcao.LESTE, new Ponto(5, 1));
-		assertThat(novaPosicao, is(equalTo(posicaoEsperada)));
+		assertThat(novaPosicao, is(equalTo(POSICAO_SEGUNDO_EXEMPLO_DESCRITO)));
 	}
 	
 	@Test
